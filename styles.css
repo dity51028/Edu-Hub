@@ -5,5 +5,193 @@
     --black-color:#070917;
     --sky-color:#E8F7FB;
     --blue-color:#6F7DFB;
+}
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+}
+
+.wrapper{
+    max-width: 1134px;
+    margin:0 auto;
+}
+
+
+/* Buttons */
+.btn{
+    padding: 16px 32px;
+    border-radius: 24px;
+    color: var(--sky-color);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+
+}
+.btn.dark{
+    background-color: var(--dark-blue-color);
+
+}
+.btn.light{
+    background-color: var(--orange-color);
+}   
+.btn.enroll::before{
+    content:url(assets/PencilAlt.png);
+    position: absolute;
+    top: 50%;
+    left:32px;
+    transform: translateY(-50%);
+
+}
+
+.btn.enroll{
+    padding-left: 60px;
+}
+
+/* Header */
+header{
+    background: linear-gradient(180deg,#6F7DFB 0%, #26308c 100%);
+    height:100vh
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1134px;
+    top: 36px;
+    z-index: 100;
+
+}
+nav .logo{
+    font-family: raleway, sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: #fff;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+}
+
+nav ul li a{
+    font-family: poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero-section{
+    display: flex;
+    height:100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.hero-section .left h1{
+    font-family: raleway, sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 125%;
+    color: #fff;
+
+}
+
+.hero-section .left p{
+    font-family: poppins, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 200%;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 457px;
+}
+.hero-section .left{
+    flex:1;
+}
+
+.hero-section .right{
+    align-items: flex-end;
+}
+
+.hero-section .right img{
+    height: 520px;
+    vertical-align: middle;
+
+}
+
+/* Achievements */
+.achievement-card{
+    position: absolute;
+    min-width: 200px;
+}
+
+.achievement-card .content{
+    border-radius: 24px;
+    background: #fff;
+    padding: 8px 32px;
+    z-index: 10;
+    position: relative;
+
+}
+
+.achievement-card.student-enrolled{
+    left: 47%;
+    top: 330px;
+}
+
+.achievement-card h3{
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--black-color);
+    margin: 0;
+    text-align: center;
+
+}
+.achievement-card p{
+    font-family: poppins, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--black-color);
+    margin-top: -8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.achievement-card .bg{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    background:linear-gradient(180deg,#6F7DFB 0%, #26308c 100%);
+    z-index: 1;
+}
+.achievement-card.overall-rating{
+    left:47%;
+    top:520px;
+    
+}
+
+.achievement-card .content div{
+    display: flex;
+    align-items: center;
 
 }
